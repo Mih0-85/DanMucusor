@@ -2022,7 +2022,7 @@ process.on("uncaughtException", (err) => {
     () => {
       scheduleReconnect();
     },
-    isNetworkError ? 5000 : 10000,
+    isNetworkError ? 30000 : 60000,
   );
 });
 
