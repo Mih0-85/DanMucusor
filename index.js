@@ -1368,7 +1368,6 @@ function createBot() {
 function scheduleReconnect() {
   clearBotTimeouts();
 
-  // FIX: don't stack reconnect if already waiting
   if (isReconnecting) {
     addLog("[Bot] Reconnect already scheduled, forcing reset.");
     isReconnecting = false;
@@ -1385,7 +1384,7 @@ function scheduleReconnect() {
   reconnectTimeoutId = setTimeout(() => {
     reconnectTimeoutId = null;
     isReconnecting = false;
-    createBot(); // ⚠️ trebuie să existe funcția asta în codul tău
+    createBot();
   }, delay);
 }
 
