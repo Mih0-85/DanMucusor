@@ -2075,4 +2075,9 @@ addLog(
 addLog("=".repeat(50));
 
 createBot();
+    
+} catch (err) {
+  addLog(`[ERROR] ${err.message}`);
+  scheduleReconnect();
 }
+
