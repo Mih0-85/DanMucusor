@@ -1369,26 +1369,26 @@ function scheduleReconnect() {
   clearBotTimeouts();
 
   // FIX: don't stack reconnect if already waiting
- if (isReconnecting) {
-  addLog("[Bot] Reconnect already scheduled, forcing reset.");
-  isReconnecting = false;
-}
-
+  if (isReconnecting) {
+    addLog("[Bot] Reconnect already scheduled, forcing reset.");
+    isReconnecting = false;
+  }
 
   isReconnecting = true;
   botState.reconnectAttempts++;
 
   const delay = getReconnectDelay();
   addLog(
-    `[Bot] Reconnecting in ${delay / 1000}s (attempt #${botState.reconnectAttempts})`,
+    `[Bot] Reconnecting in ${delay / 1000}s (attempt #${botState.reconnectAttempts})`
   );
 
   reconnectTimeoutId = setTimeout(() => {
     reconnectTimeoutId = null;
     isReconnecting = false;
-    createBot();
+    createBot(); // ⚠️ trebuie să existe funcția asta în codul tău
   }, delay);
 }
+
 
 // ============================================================
 // MODULE INITIALIZATION
