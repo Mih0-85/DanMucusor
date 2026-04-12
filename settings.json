@@ -1,7 +1,7 @@
 {
   "name": "DanMucusor",
   "bot-account": {
-    "username": "Slobot00",
+    "username": "DanMucusor",
     "password": "",
     "type": "offline"
   },
@@ -31,9 +31,12 @@
       "repeat": true,
       "repeat-delay": 120,
       "messages": [
-        "I'm a regular player",
-        "Subscribe to Slobos!",
-        "I like to play Minecraft!"
+        "Scarpau Bas",
+        "Stoba Bas",
+        "Scarpau Mih",
+        "Stoba Mih",
+        "Scarpau Bob",
+        "Stoba Bob"
       ]
     },
     "chat-log": true,
