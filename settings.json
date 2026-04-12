@@ -22,6 +22,10 @@
       "enabled": true,
       "password": "chalol78"
     },
+ "auto-reconnect-delay": 30000,
+    "max-reconnect-delay": 120000
+      }
+}
     "anti-afk": {
       "enabled": true,
       "sneak": true
